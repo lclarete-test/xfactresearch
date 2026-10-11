@@ -1,38 +1,31 @@
 # XFact Research
 
-Static website for XFact Research. Files are served directly; no build or package installation is required.
+Website published with GitHub Pages from the main branch and repository root. Custom domain: xfactresearch.com.
 
-## Deployment with a private GitHub repository
+## GoDaddy DNS
 
-1. In Netlify, select Add new project, then Import an existing project.
-2. Connect GitHub and select lclarete-test/xfactresearch.
-3. Choose main. Leave the build command empty. Use . as the publish directory.
-4. Deploy, then add xfactresearch.com in Domain management.
-5. In GoDaddy, open the domain DNS settings. Set the apex A record named @ to 75.2.60.5. Set the www CNAME to the exact project hostname returned by Netlify, ending in netlify.app.
-6. Remove conflicting parking records for @ and www only. Preserve MX, email TXT and other records.
-7. Wait for DNS verification and HTTPS provisioning.
+Open the DNS settings for xfactresearch.com. Use these records:
 
-The _redirects file supports direct links to application routes.
+| Type | Name | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | lclarete-test.github.io |
 
-## GitHub Pages alternative
+Replace conflicting parking records for @ and www. Preserve all MX records, email TXT records and unrelated records. Use the default TTL.
 
-GitHub Free requires a public repository. GitHub Pro also supports private repositories. Enable Pages in repository Settings. Choose Deploy from a branch, main, / (root). Add xfactresearch.com as the custom domain.
+GitHub Pages is enabled in Settings > Pages with main and / (root). Once DNS passes, enable Enforce HTTPS. No separate hosting purchase is required.
 
-GoDaddy DNS for GitHub Pages:
-A @ 185.199.108.153
-A @ 185.199.109.153
-A @ 185.199.110.153
-A @ 185.199.111.153
-CNAME www lclarete-test.github.io
+## Files and updates
 
-Use one hosting provider's DNS records at a time.
+Files are already built. No build command or package installation is required. Commit changes to main to trigger publication. CNAME contains the custom domain. The .nojekyll file disables Jekyll processing. The 404.html file provides the client-side application fallback.
 
 ## Current limitations
 
-The contact form is a demonstration and does not submit leads. The contact email is hello@expectresearch.com, as requested; it differs from xfactresearch.com and should be confirmed before launch. Some internal Arabic and Mandarin copy remains English. The site uses a client-side routing bundle. Stock photography credits are in assets/photo-credits.txt.
+The contact form does not submit leads. Contact email is hello@expectresearch.com as requested. Some internal Arabic and Mandarin copy remains English. Photo credits are in assets/photo-credits.txt.
 
-## References
+## Official instructions
 
-https://docs.netlify.com/start/quickstarts/deploy-from-repository/
-https://docs.netlify.com/manage/domains/get-started-with-domains/
 https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
