@@ -1,0 +1,7 @@
+/* Existing XFact brand fonts; copied without modification from the website. */
+@font-face{font-family:XFact Nexa;src:url('./assets/fonts/NexaRegular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:XFact Nexa;src:url('./assets/fonts/Nexa_Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:XFact Inter;src:url('./assets/fonts/inter-regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:XFact Inter;src:url('./assets/fonts/inter-medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:XFact Inter;src:url('./assets/fonts/inter-semibold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:XFact Inter;src:url('./assets/fonts/inter-bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
